@@ -11,14 +11,8 @@ import lombok.Data;
 public class Robot {
 	
 
-	@Autowired
-	@Value("#{randomText.text?.length()}")
+
 	private String id = "default robot";
-	@Autowired
-	//new java.util.Date().toString()
-	//T(Math).PI
-	//T(Math).sin(5)
-	@Value("#{T(Math).sin(T(Math).PI/4)^2 le 0.8 ? 'Yes':'No'}")
 	private String speech = "hello";
 	
 	public void speak() {
