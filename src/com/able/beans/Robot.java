@@ -10,12 +10,17 @@ import lombok.Data;
 @Component
 public class Robot {
 	
+
 	@Autowired
-	@Value("123")
-	private int id;
+	@Value("#{randomText.text?.length()}")
+	private String id = "default robot";
 	@Autowired
-	@Value("hello,surprise")
-	private String speech;
+	//new java.util.Date().toString()
+	//T(Math).PI
+	//T(Math).sin(5)
+	@Value("#{T(Math).sin(T(Math).PI/4)^2 le 0.8 ? 'Yes':'No'}")
+	private String speech = "hello";
+	
 	public void speak() {
 		System.out.println(id + ":" + speech);
 		

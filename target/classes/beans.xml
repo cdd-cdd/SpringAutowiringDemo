@@ -15,6 +15,15 @@
 	</bean>
 	<bean id="fileWriter" class="com.able.beans.FileWriter"></bean>
 	 -->
+	 
+<!-- 	 <bean id="robot" class="com.able.beans.Robot">
+	   <property name="id" value="#{randomText.text?.length()}"></property>
+	   <property name="speech" value="#{randomText.getText()}"></property>
+	 </bean>
+	 
+	 <bean id="randomText" class="com.able.beans.RandomText">
+	 
+	 </bean> -->
 
     <context:annotation-config></context:annotation-config>
     
